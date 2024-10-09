@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Central de Uso EdxLinux e FostonLinux</title>
+    <style>
+        body {
+            background-color: #001f3f; /* Azul escuro */
+            color: yellow; /* Letras amarelas */
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            color: red; /* Vermelho */
+            text-align: center;
+        }
+
+        a {
+            color: yellow;
+            text-decoration: none;
+        }
+
+        .content {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .code {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            display: inline-block;
+            text-align: left;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Central de Uso - EdxLinux e FostonLinux</h1>
+
+    <div class="content">
+        <p>Para baixar os pacotes .deb, clique no link abaixo:</p>
+        <a href="https://github.com/edxlinux993/edx-e-foston-linux" target="_blank">
+            Baixar Pacotes .deb
+        </a>
+
+        <p>Use o comando abaixo para baixar todos os pacotes .deb com o <code>wget</code>:</p>
+        <div class="code">
+            wget -r -np -nH --cut-dirs=1 -R "index.html*" https://github.com/edxlinux993/edx-e-foston-linux
+        </div>
+
+        <p>Depois de baixar, execute o seguinte comando para instalar todos os pacotes:</p>
+        <div class="code">
+            sudo dpkg -i *.deb
+        </div>
+    </div>
+
+</body>
+</html>
+
